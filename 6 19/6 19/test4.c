@@ -60,9 +60,39 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	printf("%zu\n", sizeof(int*));
+//	printf("%zu\n", sizeof(char*));
+//	return 0;
+//} 
+
+//struct Stu
+//{
+//	char name[20];
+//	char sex[10];
+//	int age;
+//	char tele[12];
+//};
+//
+//void print(struct Stu* ps)
+//{
+//	printf("%s %s %d %s\n", (*ps).name, (*ps).sex, (*ps).age, (*ps).tele);
+//	printf("%s %s %d %s\n", ps->name, ps->sex, ps->age, ps->tele);
+//}
+//int main()
+//{
+//	struct Stu s = { "Linr","man",18,"13178259869" };
+//	/*printf("%s %s %d %s\n", s.name, s.sex, s.age, s.tele);*/
+//	print(&s);
+//	return 0;
+//}
+
 int main()
 {
-	printf("%zu\n", sizeof(int*));
-	printf("%zu\n", sizeof(char*));
+	int a = 0;
+	int b = 0;
+	scanf("%d %d", &a, &b);
+	printf("%d %d\n", a / b, a % b);
 	return 0;
 }
