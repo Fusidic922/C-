@@ -146,25 +146,36 @@
 //	return 0;
 //}
 
-int max(int x, int y)
-{
-	if (x > y)
-		return x;
-	else
-		return y;
-}
+//int main()
+//{
+//	int num[4] = { 0 };
+//	int i = 0;
+//	int m = 0;
+//	while (i < 4)
+//	{
+//		scanf("%d", &num[i]);
+//		if (m < num[i])
+//			m = num[i];
+//		i++;
+//	}
+//	printf("%d\n", m);
+//	return 0;
+//}
+
+//int main()
+//{
+//	float a = 3.1415926;
+//	float r = 0.0f;
+//	scanf("%f", &r);
+//	printf("%.3f\n", 4 / 3.0 * a * r * r * r);
+//	return 0;
+//}
 
 int main()
 {
-	int num[4] = { 0 };
-	int i = 1;
-	int m = 0;
-	scanf("%d %d %d %d", &num[0], &num[1], &num[2], &num[3]);
-	while (i < 4)
-	{
-		m = max(num[i - 1], num[i]);
-		i++;
-	}
-	printf("%d\n", m);
+	int weight = 0;
+	int height = 0;
+	scanf("%d %d", &weight, &height);
+	printf("%.2f\n", weight / ((height / 100.0) * (height / 100.0)));
 	return 0;
 }
