@@ -96,6 +96,7 @@
 //	return 0;
 //}
 
+#include <string.h>
 int main()
 {
 	int j = 0;
@@ -112,7 +113,7 @@ int main()
 		}
 		for (i = 0;i < sz + 1;i++)
 		{
-			if (i == sz)
+			if (i == sz && password[i] == input[i])
 			{
 				printf("密码正确\n");
 				break;
@@ -123,11 +124,15 @@ int main()
 			{
 				printf("密码错误\n");
 				printf("还有%d次机会\n", 3 - j - 1);
+				while (getchar() != '\n')
+				{
+					;
+				}
 				break;
 			}
 
 		}
-		if (i == sz)
+		if (i == sz && password[i] == input[i])
 			break;
 	}
 	return 0;
