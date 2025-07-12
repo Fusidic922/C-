@@ -98,25 +98,77 @@
 //	}
 //}
 
-int fei(unsigned int x)
+//int fei(unsigned int x)
+//{
+//	if (x > 2)
+//	{
+//		int a = 1;
+//		int b = 1;
+//		int c = 0;
+//		int i = 0;
+//		for (i = 0;i < x - 2;i++)
+//		{
+//			c = a + b;
+//			a = b;
+//			b = c;
+//		}
+//		return c;
+//	}
+//	else
+//	{
+//		return 1;
+//	}
+//}
+//
+//int main()
+//{
+//	unsigned int n = 0;
+//	scanf("%u", &n);
+//	printf("%u\n", fei(n));
+//	return 0;
+//}
+
+//int han(unsigned int x)
+//{
+//	if (x > 1)
+//	{
+//		return 1 + 2 * han(x - 1);
+//	}
+//	else if (1 == x)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//
+//int main()
+//{
+//	unsigned int n = 0;
+//	scanf("%u", &n);
+//	printf("%u\n", han(n));
+//	return 0;
+//}
+
+int qin(unsigned int x)
 {
 	if (x > 2)
 	{
-		int a = 1;
-		int b = 1;
-		int c = 0;
-		int i = 0;
-		for (i = 0;i < x - 2;i++)
-		{
-			c = a + b;
-			a = b;
-			b = c;
-		}
-		return c;
+		return qin(x - 1) + qin(x - 2);
+	}
+	else if (2 == x)
+	{
+		return 2;
+	}
+	else if (1 == x)
+	{
+		return 1;
 	}
 	else
 	{
-		return 1;
+		return 0;
 	}
 }
 
@@ -124,6 +176,6 @@ int main()
 {
 	unsigned int n = 0;
 	scanf("%u", &n);
-	printf("%u\n", fei(n));
+	printf("%u\n", qin(n));
 	return 0;
 }
